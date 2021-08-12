@@ -1,7 +1,67 @@
-{% if page.title%}
-  <h1>{{page.title}}</h1>
-{% else %}
-  <h1>Untitled post</h1>
-{% endif %}
-{{ page.date | date: "%b %d, %Y" }}
-{{ content }}
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
+  @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+  body {
+    margin: 0px;
+    background: #1F2937;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 16px;
+  }
+ 
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #32393F; 
+    border-radius: 16px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3B4248; 
+  }
+
+  body > div {
+    flex-grow: 1;
+    margin: 5rem 11rem 5rem 11rem;
+  }
+
+  .back {
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 1024px) {
+    body > div {
+      margin: 5rem 2.5rem 5rem 2.5rem;
+    }
+  }
+</style>
+
+{% include head.html %}
+
+{% include navbar.html %}
+<div>
+  <a href="/">
+    <span class="material-icons back">keyboard_backspace</span>
+  </a>
+  {% if page.title%}
+    <h1>{{page.title}}</h1>
+  {% else %}
+    <h1>Untitled post</h1>
+  {% endif %}
+  {{ page.date | date: "%b %d, %Y" }}
+  {{ content }}
+</div>
+{% include footer.html %}
