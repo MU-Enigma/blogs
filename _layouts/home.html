@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
+
+  body {
+    margin: 0px;
+    background: #1F2937;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  body > div {
+    flex-grow: 1;
+    margin: 5rem 11rem 5rem 11rem;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: 1.875rem;
+    margin: 0 0 1rem 0;
+  }
+
+  .blog-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  @media (max-width: 1024px) {
+    body > div {
+      margin: 5rem 2.5rem 5rem 2.5rem;
+    }
+  }
+</style>
+
+{% include head.html %}
+
+<div>
+  <h1 class="text-accent">Blogs</h1>
+  <ul class="blog-list">
+    {% for post in site.posts %}
+    <li><a href="{{ post.url | relative_url }}">{{post.title}}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% include footer.html %}
