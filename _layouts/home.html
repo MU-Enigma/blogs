@@ -12,17 +12,20 @@ layout: default
     flex-direction: column;
     min-height: 100vh;
     font-family: 'Roboto Mono', monospace;
+    color: white;
   }
 
   body > div {
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     margin: 5rem 11rem 5rem 11rem;
   }
 
   h1 {
-    font-weight: bold;
     font-size: 1.875rem;
-    margin: 0 0 1rem 0;
+    margin: 0;
   }
 
   .blog-list {
@@ -30,7 +33,11 @@ layout: default
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 1.25rem;
+  }
+
+  .blog-list > h2 {
+    margin: 0;
   }
 
   @media (max-width: 1024px) {
@@ -44,10 +51,23 @@ layout: default
 
 <div>
   <h1 class="text-accent">Blogs</h1>
-  <ul class="blog-list">
+  <div class="blog-list">
+
     {% for post in site.posts %}
-    <li><a href="{{ post.url | relative_url }}">{{post.title}}</a></li>
+    {% assign year = post.date | date: "%Y" %}
+    {% if year != prev_year %}
+    <h2 style="margin-top: 2rem;">{{year}}</h2>
+    {% endif %}
+
+    <div style="width: 100%;">
+      <a href="{{ post.url | relative_url }}" style="display: flex; justify-content: space-between;">
+        <span>{{post.title}}</span>
+        <span>{{ post.date | date: '%B %d' }}</span>
+      </a>
+    </div>
+    {% assign prev_year = year %}
     {% endfor %}
-  </ul>
+
+  </div>
 </div>
 {% include footer.html %}

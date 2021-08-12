@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    color: white;
+    color: rgba(255, 255, 255, 0.8);
     font-family: 'Roboto Mono', monospace;
   }
 
@@ -38,6 +38,10 @@
     margin: 5rem 11rem 5rem 11rem;
   }
 
+  div > p > a {
+    text-decoration: underline;
+  }
+
   .back {
     margin-bottom: 2rem;
   }
@@ -47,6 +51,8 @@
       margin: 5rem 2.5rem 5rem 2.5rem;
     }
   }
+
+  
 </style>
 
 {% include head.html %}
@@ -61,7 +67,11 @@
   {% else %}
     <h1>Untitled post</h1>
   {% endif %}
-  {{ page.date | date: "%b %d, %Y" }}
+  {% if page.author %}
+    <h2>{{ page.author }}</h2>
+  {% else %}
+    <h2>No Author</h2>
+  {% endif %}
   {{ content }}
 </div>
 {% include footer.html %}

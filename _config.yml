@@ -19,17 +19,8 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Enigma - Blog
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Blogs
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
-
-# Build settings
-plugins:
-  - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -33,9 +33,25 @@
     color: white;
   }
 
+  .home-back {
+    display: none;
+  }
+
   @media (max-width: 1024px) {
     header > svg {
       width: 1.5rem;
+    }
+
+    .home-back {
+      display: block;
+    }
+
+    .nav {
+      gap: 0;
+    }
+
+    .home, .about, .blog, .projects, .events, .gallery {
+      display: none;
     }
   }
 </style>
@@ -62,6 +78,12 @@
       fill="white" />
   </svg>
   <ul class="nav">
-    <li><a href="/">Enigma Home</a></li>
+    <li><a href="https://mec-enigma.github.io" class="home-back">Back Home</a></li>
+    <li><a href="https://mec-enigma.github.io" class="home">Home</a></li>
+    <li><a href="https://mec-enigma.github.io/about.html" class="about">About</a></li>
+    <li><a href="/blogs" class="text-accent blog">Blog</a></li>
+    <li><a href="https://mec-enigma.github.io/projects.html" class="projects">Projects</a></li>
+    <li><a href="https://mec-enigma.github.io/events.html" class="events">Events</a></li>
+    <li><a href="https://mec-enigma.github.io/gallery.html" class="gallery">Gallery</a></li>
   </ul>
 </header>
