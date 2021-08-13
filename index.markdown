@@ -4,4 +4,5 @@
 
 layout: home
 title: Enigma - Blog
+permalink: /
 ---

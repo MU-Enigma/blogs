@@ -19,8 +19,12 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Enigma - Blog
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+domain: androbuddy.github.io
+baseurl: "/blogs/" # the subpath of your site, e.g. /blog
+url: "https://androbuddy.github.io/blogs" # the base hostname & protocol for your site, e.g. http://example.com
+theme: minima
+plugins:
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.

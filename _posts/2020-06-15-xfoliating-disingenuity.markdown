@@ -25,10 +25,10 @@ Now obviously I wasn't satisfied with simple text-based responses (because readi
 
 Being a baby to everything about everything, I was unaware of the existence of the \`\`\` format in discord (known as the code block if I'm not wrong), and after a couple hours of getting confused between \` and ' (don't), everything sailed as smooth as the head of a newborn baby.
 
-<img src="/assets/img/blog-images/xfoliating_disingenuity/XDBot_0.jpg" width="300vw;" style="max-width: 400px;" class="image-center">
+<img src="/blogs/assets/img/blog-images/xfoliating_disingenuity/XDBot_0.jpg" width="300vw;" style="max-width: 400px;" class="image-center">
 <p style="text-align: center">xD Bot xD-ing</p> <br>
 
-<img src="/assets/img/blog-images/xfoliating_disingenuity/XDBot_1.jpg" width="300vw;" style="max-width: 400px;" class="image-center">
+<img src="/blogs/assets/img/blog-images/xfoliating_disingenuity/XDBot_1.jpg" width="300vw;" style="max-width: 400px;" class="image-center">
 <p style="text-align: center">Some more xD-ing</p> <br>
 
 Now given the "spontaneous" characteristic of the bot in consideration, I had to make sure it ran perpetually, so as to not miss any potential targets. My first thought went to the cloud, but it wasn't cool enough for me (and totally not because I could not figure how to get it set up). So instead, I pulled out my raspberry pi and kept my bot running on there. This didn't prove to be as easy as I thought, for there was a minor hiccup in this too.

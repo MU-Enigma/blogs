@@ -21,7 +21,7 @@ To my surprise, it wasn’t that hard. All I had to do was know a little bit of 
 
 The next challenge was something because of which I was able to learn a lot of new things (I can’t emphasize 'a lot' enough). I was supposed to make the bot run continuously (by running `python3 StartMyTelegramBot.py` on my laptop) so that it could listen for commands or messages and do what it was made to do. However, I couldn't keep my laptop switched on forever. That's practically impossible. I approached my senior, [Raghav](https://icecereal.github.io), who properly guided me on hosting the bot. It ran on my trusty Raspberry Pi 4 (4 GB RAM) for a while and it's now currently hosted on Heroku. You can head over to [TheNoob2001_bot](https://web.telegram.org/#/im?p=@TheNoob2001_bot) to chat with the bot.
 
-<img src="/assets/img/blog-images/how_I_built_my_first_bot/TelegramBot_Final.png" width="300vw;" style="max-width: 400px;" class="image-center">
+<img src="/blogs/assets/img/blog-images/how_I_built_my_first_bot/TelegramBot_Final.png" width="300vw;" style="max-width: 400px;" class="image-center">
 <p style="text-align: center">The Bot in Action</p> <br>
 
 The funny thing about this was that I made it during my End Semester Exams. Like always, the most interesting and attractive ideas/projects show up only when one has exams.
