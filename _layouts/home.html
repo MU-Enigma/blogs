@@ -7,7 +7,7 @@ layout: default
 
   body {
     margin: 0px;
-    background: #1F2937;
+    background: rgb(15 23 42);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -65,6 +65,10 @@ layout: default
     body > div {
       margin: 5rem 2.5rem 5rem 2.5rem;
     }
+
+    .blog-title {
+      width: 15rem;
+    }
   }
 </style>
 
@@ -80,8 +84,8 @@ layout: default
 
     <div style="width: 100%;">
       <a href="{{ post.url | relative_url }}" style="display: flex; justify-content: space-between;">
-        <span>{{post.title}}</span>
-        <span>{{ post.date | date: '%B %d' }}</span>
+        <span class="blog-title">{{post.title}}</span>
+        <span>{{ post.date | date: '%b %d' }}</span>
       </a>
     </div>
     {% assign prev_year = year %}
